@@ -163,9 +163,9 @@ class SendEmailToSingleRecipientRequest implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -264,38 +264,25 @@ class SendEmailToSingleRecipientRequest implements ModelInterface, ArrayAccess
         return $this;
     }
     /**
-     * Returns true if offset exists. False otherwise.
-     *
-     * @param integer $offset Offset
-     *
-     * @return boolean
+     * @inheritDoc
      */
-    public function offsetExists($offset)
+    public function offsetExists(mixed $offset): bool
     {
         return isset($this->container[$offset]);
     }
 
     /**
-     * Gets offset.
-     *
-     * @param integer $offset Offset
-     *
-     * @return mixed
+     * @inheritDoc
      */
-    public function offsetGet($offset)
+    public function offsetGet(mixed $offset): mixed
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
     }
 
     /**
-     * Sets value based on offset.
-     *
-     * @param integer $offset Offset
-     * @param mixed   $value  Value to be set
-     *
-     * @return void
+     * @inheritDoc
      */
-    public function offsetSet($offset, $value)
+    public function offsetSet(mixed $offset, mixed $value): void
     {
         if (is_null($offset)) {
             $this->container[] = $value;
@@ -305,13 +292,9 @@ class SendEmailToSingleRecipientRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Unsets offset.
-     *
-     * @param integer $offset Offset
-     *
-     * @return void
+     * @inheritDoc
      */
-    public function offsetUnset($offset)
+    public function offsetUnset(mixed $offset): void
     {
         unset($this->container[$offset]);
     }
