@@ -30,6 +30,7 @@ namespace SalesForce\MarketingCloud\Api;
 
 use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
+use GuzzleHttp\Psr7\Query;
 use GuzzleHttp\Psr7\Request;
 use SalesForce\MarketingCloud\Api\Exception\ExceptionFactory;
 use SalesForce\MarketingCloud\Api\Exception\InvalidRequestException;
@@ -6032,7 +6033,7 @@ class TransactionalMessagingApi extends AbstractApi
 
         $headers['User-Agent'] = static::getUserAgent();
 
-        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        $query = Query::build($queryParams);
         return new Request(
             'POST',
             $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
