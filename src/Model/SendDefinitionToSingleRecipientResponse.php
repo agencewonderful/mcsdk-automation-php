@@ -168,9 +168,9 @@ class SendDefinitionToSingleRecipientResponse implements ModelInterface, ArrayAc
         return self::$swaggerModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -277,7 +277,7 @@ class SendDefinitionToSingleRecipientResponse implements ModelInterface, ArrayAc
     /**
      * Sets responses
      *
-     * @param \SalesForce\MarketingCloud\Model\SendDefinitionResponseItem[] $responses 
+     * @param \SalesForce\MarketingCloud\Model\SendDefinitionResponseItem[] $responses
      *
      * @return $this
      */
@@ -294,7 +294,7 @@ class SendDefinitionToSingleRecipientResponse implements ModelInterface, ArrayAc
      *
      * @return boolean
      */
-    public function offsetExists($offset)
+    public function offsetExists(mixed $offset): bool
     {
         return isset($this->container[$offset]);
     }
@@ -306,7 +306,7 @@ class SendDefinitionToSingleRecipientResponse implements ModelInterface, ArrayAc
      *
      * @return mixed
      */
-    public function offsetGet($offset)
+    public function offsetGet(mixed $offset): mixed
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
     }
@@ -319,7 +319,7 @@ class SendDefinitionToSingleRecipientResponse implements ModelInterface, ArrayAc
      *
      * @return void
      */
-    public function offsetSet($offset, $value)
+    public function offsetSet(mixed $offset, mixed $value): void
     {
         if (is_null($offset)) {
             $this->container[] = $value;
@@ -335,7 +335,7 @@ class SendDefinitionToSingleRecipientResponse implements ModelInterface, ArrayAc
      *
      * @return void
      */
-    public function offsetUnset($offset)
+    public function offsetUnset(mixed $offset): void
     {
         unset($this->container[$offset]);
     }
